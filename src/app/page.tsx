@@ -7,7 +7,7 @@ export default function Home() {
       <div className="text-center max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Heading */}
         <h1 className="text-5xl md:text-6xl font-bold text-[#003262] mb-6">
-          Hi 👋 I'm {siteConfig.name}
+          Hi 👋 I&apos;m {siteConfig.name}
         </h1>
         
         {/* Subtitle */}

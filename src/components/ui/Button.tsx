@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
-import { siteConfig } from '@/config/site'
 
 interface ButtonProps {
   children: ReactNode

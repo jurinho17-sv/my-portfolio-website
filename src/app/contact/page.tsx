@@ -7,7 +7,7 @@ export default function ContactPage() {
         <div>
           <h2 className="text-xl font-semibold text-[#003262] mb-4">Get in Touch</h2>
           <p className="text-gray-600 mb-6">
-            I'm always interested in new opportunities, collaborations, and interesting projects. 
+            I&apos;m always interested in new opportunities, collaborations, and interesting projects. 
             Feel free to reach out!
           </p>
           

@@ -1,5 +1,4 @@
 import { getAllProjects } from '@/lib/projects'
-import { Project } from '@/types'
 import Container from '@/components/ui/Container'
 import ProjectCard from '@/components/projects/ProjectCard'
 

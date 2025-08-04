@@ -1,5 +1,4 @@
 import { getAllPosts } from '@/lib/blog'
-import { BlogPost } from '@/types'
 import Container from '@/components/ui/Container'
 import BlogCard from '@/components/blog/BlogCard'
 
