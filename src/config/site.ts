@@ -38,7 +38,6 @@ export const siteConfig = {
     { name: 'About', href: '/about' },
     { name: 'Resume', href: '/resume' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Admin', href: '/admin' },
   ],
   // Categories will be managed dynamically from blog posts
   // No hardcoded categories - they'll be generated from actual blog post categories
