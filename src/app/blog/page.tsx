@@ -1,20 +1,11 @@
-import { getAllPosts, getAllCategories, getCategoryPostCount } from '@/lib/blog'
-import { BlogPost, Category } from '@/types'
+import { getAllPosts } from '@/lib/blog'
+import { BlogPost } from '@/types'
 import Container from '@/components/ui/Container'
 import BlogCard from '@/components/blog/BlogCard'
-import BlogFilter from '@/components/blog/BlogFilter'
 
 export default function BlogPage() {
-  // Get posts and categories on the server side
+  // Get posts on the server side
   const posts = getAllPosts()
-  const allCategories = getAllCategories()
-  
-  // Create category objects with counts
-  const categories: Category[] = allCategories.map(name => ({
-    name,
-    count: getCategoryPostCount(name),
-    slug: name.toLowerCase().replace(/\s+/g, '-')
-  }))
 
   return (
     <Container>
@@ -25,7 +16,19 @@ export default function BlogPage() {
         </p>
       </div>
       
-      <BlogFilter posts={posts} categories={categories} />
+      <div className="grid gap-6">
+        {posts.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">
+              No blog posts available yet.
+            </p>
+          </div>
+        ) : (
+          posts.map(post => (
+            <BlogCard key={post.slug} post={post} />
+          ))
+        )}
+      </div>
     </Container>
   )
 }
